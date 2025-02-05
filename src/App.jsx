@@ -1,10 +1,16 @@
-import HeroCarousel from "./components/Hero/Hero"
+import { Outlet } from "react-router-dom"
+import Header from "./components/Header/Header"
 
 function App() {
 
   return (
     <>
-      <HeroCarousel/>
+      <nav>
+        <Header />
+      </nav>
+      <main>
+        <Outlet />
+      </main>
     </>
   )
 }
