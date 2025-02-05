@@ -65,7 +65,6 @@ const CardSection = () => {
     return (
         <div className="container mx-auto px-6 md:px-12 mt-20">
 
-            {/* ✅ Description Text Above Cards */}
             <div className="text-start mb-10">
                 <p className="text-start font-light mt-1 text-gray-700 text-lg tracking-widest uppercase">
                     Showreel
