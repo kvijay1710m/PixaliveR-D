@@ -5,6 +5,7 @@ import Mission from '../components/Mission/Mission'
 import Services from '../components/Services/Services'
 import ShowReel from '../components/ShowReel/ShowReel'
 import Ourwork from '../components/Ourwork/Ourwork'
+import Whyus from '../components/Whyus/Whyus'
 
 const Landing = () => {
   return (
@@ -12,10 +13,11 @@ const Landing = () => {
       <div className='pt-15'>
         <HeroCarousel />
       </div>
-      <Mission/>
-      <Services/>
-      <ShowReel/>
-      <Ourwork/>
+      <Mission />
+      <Services />
+      <ShowReel />
+      <Ourwork />
+      <Whyus />
       <Footer />
     </div>
   )

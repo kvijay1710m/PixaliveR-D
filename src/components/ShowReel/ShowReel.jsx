@@ -17,7 +17,6 @@ const cards = [
         subtitle: "Branding & Development",
         img: "https://images.pexels.com/photos/5292195/pexels-photo-5292195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
-
     {
         title: "Social media & Branding",
         subtitle: "Branding & Development",
@@ -33,14 +32,15 @@ const cards = [
         subtitle: "Easy to pitch",
         img: "https://images.pexels.com/photos/30530413/pexels-photo-30530413/free-photo-of-interactive-ai-interface-displayed-on-laptop.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
-
 ];
 
 const Card = ({ title, subtitle, img, index }) => {
+    const isMiddleCard = index % 3 === 1; // Middle card in each row (0-based index)
+    
     return (
         <motion.div
-            className="relative bg-white p-4 rounded-lg shadow-lg cursor-pointer transition-all duration-600"
-            initial={{ y: index === 1 ? 20 : 0 }} // Middle card slightly lower
+            className="relative bg-white p-4 rounded-lg shadow-lg cursor-pointer transition-all duration-700"
+            initial={{ y: isMiddleCard ? 40 : 0 }} // Middle card slightly lower
             whileHover={{ scale: 0.90 }} // Shrinks slightly on hover
         >
             {/* Image with Hover Effect */}
@@ -53,8 +53,8 @@ const Card = ({ title, subtitle, img, index }) => {
             />
 
             {/* Text Content */}
-            <div className="mt-8 text-center">
-                <p className="text-gray-500 mt-5 text-sm">{subtitle}</p>
+            <div className="mt-8 text-start">
+                <p className="text-gray-700 mt-5 text-sm">{subtitle}</p>
                 <h2 className="text-xl mt=4 font-semibold">{title}</h2>
             </div>
         </motion.div>
@@ -63,11 +63,10 @@ const Card = ({ title, subtitle, img, index }) => {
 
 const CardSection = () => {
     return (
-        <div className="container mx-auto px-6 md:px-12 mt-20">
-
+        <div className="container mx-auto px-6 md:px-12 mt-20 mb-12">
             <div className="text-start mb-10">
                 <p className="text-start font-light mt-1 text-gray-700 text-lg tracking-widest uppercase">
-                    Showreel
+                    Show reel
                 </p>
 
                 <div className="text-start my-6 mt-6">
@@ -78,7 +77,7 @@ const CardSection = () => {
             </div>
 
             {/* ✅ Cards Grid (3 cards per row) */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-y-20 gap-8">
                 {cards.map((card, index) => (
                     <Card key={index} {...card} index={index} />
                 ))}
