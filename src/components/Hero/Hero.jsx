@@ -26,7 +26,7 @@ export default function HeroCarousel() {
     }, []);
 
     return (
-        <div className="relative w-full h-screen flex flex-col md:flex-row items-center overflow-hidden">
+        <div className="relative w-full h-screen flex flex-col md:flex-row items-center overflow-hidden mt-3">
 
             {/* Background Image (Full Screen on Mobile) */}
             <div className="absolute inset-0 w-full h-full">
