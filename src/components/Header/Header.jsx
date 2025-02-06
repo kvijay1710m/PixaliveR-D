@@ -39,7 +39,7 @@ const Header = () => {
           <Link to="/services" className="hover:text-gray-500">Services</Link>
           <Link to="/blog" className="hover:text-gray-500">Blog</Link>
           <Link to="/careers" className="hover:text-gray-500">Careers</Link>
-          <Link to="/contact-us" className="hover:text-gray-500">Contact Us</Link>
+          <Link to="/contact" className="hover:text-gray-500">Contact Us</Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -62,7 +62,7 @@ const Header = () => {
               <li><Link to="/services" className="block px-4 py-2 hover:text-blue-600">Services</Link></li>
               <li><Link to="/blog" className="block px-4 py-2 hover:text-blue-600">Blog</Link></li>
               <li><Link to="/careers" className="block px-4 py-2 hover:text-blue-600">Careers</Link></li>
-              <li><Link to="/contact-us" className="block px-4 py-2 hover:text-blue-600">Contact Us</Link></li>
+              <li><Link to="/contact" className="block px-4 py-2 hover:text-blue-600">Contact Us</Link></li>
             </ul>
           </motion.div>
         )}

@@ -17,7 +17,7 @@ const CursorFollower = () => {
 
     return (
         <motion.div
-            className="fixed top-0 left-0 w-5 h-5 bg-blue-500 rounded-full pointer-events-none mix-blend-difference"
+            className="fixed top-0 left-0 w-5 h-5 bg-gray-400 rounded-full pointer-events-none mix-blend-difference"
             style={{ translateX: "-50%", translateY: "-50%" }} // Centers the ball on the cursor
             animate={{
                 x: cursorPosition.x,
