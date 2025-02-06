@@ -34,33 +34,6 @@ const cards = [
     },
 ];
 
-const Card = ({ title, subtitle, img, index }) => {
-    const isMiddleCard = index % 3 === 1; // Middle card in each row (0-based index)
-    
-    return (
-        <motion.div
-            className="relative bg-white p-4 rounded-lg shadow-lg cursor-pointer transition-all duration-700"
-            initial={{ y: isMiddleCard ? 40 : 0 }} // Middle card slightly lower
-            whileHover={{ scale: 0.90 }} // Shrinks slightly on hover
-        >
-            {/* Image with Hover Effect */}
-            <motion.img
-                src={img}
-                alt={title}
-                className="w-full h-96 object-cover rounded-lg"
-                whileHover={{ scale: 1.1 }} // Zoom-out effect on image
-                transition={{ duration: 0.4 }}
-            />
-
-            {/* Text Content */}
-            <div className="mt-8 text-start">
-                <p className="text-gray-700 mt-5 text-sm">{subtitle}</p>
-                <h2 className="text-xl mt=4 font-semibold">{title}</h2>
-            </div>
-        </motion.div>
-    );
-};
-
 const CardSection = () => {
     return (
         <div className="container mx-auto px-6 md:px-12 mt-20 mb-12">
@@ -76,11 +49,35 @@ const CardSection = () => {
                 </div>
             </div>
 
-            {/* ✅ Cards Grid (3 cards per row) */}
+            {/* Image Grid (3 images per row) */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-y-20 gap-8">
-                {cards.map((card, index) => (
-                    <Card key={index} {...card} index={index} />
-                ))}
+                {cards.map((card, index) => {
+                    const isMiddleCard = index % 3 === 1; // Middle card adjustment
+                    
+                    return (
+                        <motion.div
+                            key={index}
+                            className="flex flex-col items-start cursor-pointer"
+                            initial={{ y: isMiddleCard ? 40 : 0 }} // Middle card is lower
+                        >
+                            {/* Image with Hover Effect */}
+                            <motion.img
+                                src={card.img}
+                                alt={card.title}
+                                className="w-full h-fit object-cover px-8"
+                                initial={{ scale: 1 }} // Default size
+                                whileHover={{ scale: 0.9 }} // Shrinks on hover
+                                transition={{ duration: 0.4, ease: "easeOut" }} // Smooth transition
+                            />
+
+                            {/* Title & Subtitle */}
+                            <div className="mt-4 text-start">
+                                <p className="text-slate-700 text-md">{card.subtitle}</p>
+                                <h2 className="text-xl font-semibold">{card.title}</h2>
+                            </div>
+                        </motion.div>
+                    );
+                })}
             </div>
         </div>
     );

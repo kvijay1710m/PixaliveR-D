@@ -23,22 +23,24 @@ const AnimatedSection = () => {
 
             {/* Right Side - Text */}
             <motion.div
-                className="w-full md:w-1/2 mt-8 md:mt-0 text-center md:text-left relative px-10 "
+                className="w-full md:w-1/2 mt-8 md:mt-0 text-center md:text-left px-10 relative"
                 initial={{ y: -50, opacity: 0 }}
                 animate={isInView ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
             >
-                {/* Overlapping Heading */}
-                <p>Why us</p>
-                <h2 className="text-black text-4xl mt-3 font-medium relative md:absolute md:-left-20 md:w-[130%] leading-tight">
+                {/* Heading Section */}
+                <p className="text-gray-600 text-lg">Why us</p>
+                <h2 className="text-black text-4xl mt-2 font-medium w-full md:w-[100%] leading-relaxed">
                     Not just another agency, we are your partner.
                 </h2>
 
-                <p className="mt-20 text-gray-700">
+                {/* Description */}
+                <p className="mt-10 text-gray-700">
                     We will work with you like your extended team and not like an outsourced agency.
                     We don't sell fluff like most agencies do. All we care about is your company's hyper-growth backed by our right positioning and marketing efforts to make your brand admirable in less than 18 months.
-                </p>
+                </p> 
 
+                {/* Button */}
                 <button className="mt-8 px-6 py-3 bg-white cursor-pointer text-black border border-black rounded-3xl shadow-md transition duration-300 hover:bg-black hover:text-white">
                     About Us
                 </button>

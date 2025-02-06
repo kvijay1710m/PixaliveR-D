@@ -11,7 +11,7 @@ const Mission = () => {
 
 
                 <div className="text-start my-6 mt-6">
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-snug">
                         Scaling your <br /> Unfair Advantage
                     </h1>
                 </div>
@@ -21,7 +21,7 @@ const Mission = () => {
                     {/* Column 1 */}
                     <div>
                         <h2 className="text-xl from-neutral-600 font-semibold mb-2">By Right Positioning</h2>
-                        <p className="mt-10 text-gray-600">
+                        <p className="mt-10 text-gray-900 font-medium">
                             You want to become an admirable brand and differentiate from competitors. The right positioning of your brand enables exponential business and revenue growth.
                         </p>
                     </div>
@@ -29,7 +29,7 @@ const Mission = () => {
                     {/* Column 2 */}
                     <div>
                         <h2 className="text-xl from-neutral-600 font-semibold mb-2">Through Right Technology</h2>
-                        <p className="mt-10 text-gray-600">
+                        <p className="mt-10 text-gray-900 font-medium">
                             Your product or service needs to create delight. Technology differentiates you with your twin competitor and makes you win the mind share by delighting your customers.
                         </p>
                     </div>
@@ -37,7 +37,7 @@ const Mission = () => {
                     {/* Column 3 */}
                     <div>
                         <h4 className="text-xl from-neutral-600 font-semibold mb-2">With Right Sales+Marketing Alignment</h4>
-                        <p className="mt-10 text-gray-600">
+                        <p className="mt-10 text-gray-900 font-medium">
                             Because funnels don't work at scale! Our aligned Sales+Marketing efforts will create a coherency & boost your market share to let you make an impact that you always wanted to.
                         </p>
                     </div>
